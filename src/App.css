@@ -2,9 +2,11 @@
   font-family: Arial, sans-serif;
   padding: 20px;
   background-color: rgb(196, 138, 62);
-  max-width: 600px; /* Limit the width for better readability */
+  max-width: 1000px; /* Limit the width for better readability */
+  padding-top: 100px;
   margin: auto; /* Center the app */
-  border-radius: 8px; 
+  border-radius: 8px;
+  text-align: center; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
@@ -14,7 +16,9 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px; 
 }
-
+li{
+  list-style: none;
+}
 button {
   margin: 5px;
   padding: 10px 15px; 

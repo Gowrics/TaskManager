@@ -1,17 +1,19 @@
+
 import React, { useState, useEffect } from 'react';
 
-const TaskManager = ({ handleSignOut }) => {
+const OneTimeTaskManager = () => {
   const [tasks, setTasks] = useState([]);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
   useEffect(() => {
-    const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    // Fetch tasks from local storage if available
+    const storedTasks = JSON.parse(localStorage.getItem('oneTimeTasks')) || [];
     setTasks(storedTasks);
   }, []);
 
   const saveTasksToLocalStorage = (tasks) => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem('oneTimeTasks', JSON.stringify(tasks));
   };
 
   const addTask = () => {
@@ -31,6 +33,7 @@ const TaskManager = ({ handleSignOut }) => {
     setTasks(updatedTasks);
     saveTasksToLocalStorage(updatedTasks);
 
+    // Clear the input fields
     setTitle('');
     setDescription('');
   };
@@ -69,8 +72,7 @@ const TaskManager = ({ handleSignOut }) => {
 
   return (
     <div>
-      <h1>Task Manager</h1>
-      <button onClick={handleSignOut}>Sign Out</button>
+      <h1>One-Time Task Manager</h1>
       <div>
         <input
           type="text"
@@ -103,4 +105,4 @@ const TaskManager = ({ handleSignOut }) => {
   );
 };
 
-export default TaskManager;
+export default OneTimeTaskManager;

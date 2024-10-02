@@ -1,0 +1,40 @@
+/* navbar.css */
+
+.navigation-section {
+    background-color: #333; /* Dark background for the navbar */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px; /* Space between the links */
+  }
+  
+  .link-button {
+    text-decoration: none; /* Remove default underline for links */
+    color: white; /* White text color */
+    background-color: #4CAF50; /* Green background for the links */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth hover transition */
+  }
+  
+  .link-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+  }
+  
+  .link-button:active {
+    background-color: #3e8e41; /* Darker green when the link is clicked */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 600px) {
+    .nav-links {
+      flex-direction: column; /* Stack links vertically */
+      gap: 10px; /* Adjust gap between stacked links */
+    }
+  }
+  
