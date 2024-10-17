@@ -22,13 +22,13 @@ const SignIn = ({ setIsAuthenticated }) => {
       <form onSubmit={handleSignIn}>
         <input
           type="text"
-          placeholder="Username"
+          placeholder="graspear"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
           type="password"
-          placeholder="Password"
+          placeholder="graspear"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
